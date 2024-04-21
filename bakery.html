@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bakery.css">
+    </head>
+    <body>
+        <header> 
+          <h1> New City Bakery</h1>
+          <p>Contact: +1-(999)-999-9999</p>
+        </header>
+  
+        <div>
+        <fieldset>
+            <legend><b><i>Personal Information</i></b></legend>
+        <form>
+            <label for="fname"> First Name:</label><br>
+            <input id="fname" name="fname" type="text" autofocus /><br>
+            <label  for="lname"> Last Name : </label><br>
+            <input id="lname" name="lname" type="text"/> <br>
+            <label for="address"> Address : </label><br>
+            <input id="address" name="address" type="text"><br>
+            <label for="pcode"> Postal Code: </label><br>
+            <input id="postal" name="pcode" type="text" pattern="[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]"/><br> 
+            <label >Phone Number: </label><br>
+            <input id="phone" type="tel"><br>
+            <label> E-mail:</label><br>
+            <input id="email" type="email"><br><br>
+        </fieldset></div> <br><br><br>
+
+
+        <div><fieldset>
+            <legend><b><i>Customize Your Cake</i></b></legend>
+            <select id="shape" onchange="showDiv(this)"><br>
+                <option >Select</option>
+                <option value="round" >round</option>
+                <option value="square">square</option>
+            </select><br><br>
+            <div id="round" >
+                <Table>
+                    <tr>
+                        <td>Number oF Layers: </td>
+                        <td><select id="opt1">
+                            <option >Select </option>
+                            <option value="1">1</option>
+                            <option value="2" >2</option>
+                            <option value="3" >3</option>
+                        </select></td>
+                    </tr>
+                    <tr>
+                        <td>Radius of Layer </td>
+                        <td><input id="radius" type="text" maxlength="30" minlength="15" placeholder="numbers between 15 to 30 "></td>
+                    </tr>
+                
+                </Table>
+            </div>
+            <div id="square" >
+                <Table>
+                    <tr>
+                        <td>Number oF Layers: </td>
+                        <td><select id="opt2">
+                            <option >select</option>
+                            <option value="1">1</option>
+                            <option value="2" >2</option>
+                            <option value="3" >3</option>
+                        </select></td>
+                    </tr>
+                    <tr>
+                        <td>Length Of Layer: </td>
+                        <td><input id="length" type="text" maxlength="60" minlength="30" placeholder="number between 30 and 60 only"></td>
+                    </tr>
+                
+                    <tr>
+                        <td>Width Of Layer: </td>
+                        <td> <input id="width" type="text" maxlength="45" minlength="30" placeholder="number between 30 and 45 only" ></td>
+                    </tr>
+                
+                </Table>
+            </div>
+        </fieldset>
+        </div><br><br><br>
+
+            <div>
+            <fieldset>
+            <legend><b><i>Any Extra Toppings </i></b></legend> 
+                <input id="cheese" type="checkbox" value="yes">
+                <label for="Cheese"> Cream Cheese Icing</label><br>
+                <input id="almonds" type="checkbox" value="1">
+                <label for="Almonds"> Fruit And Almonds</label><br>
+                <input id="jam"  type="checkbox" value="1">
+                <label for="Jam">Fruit Jam Filling</label>
+           
+             </fieldset> </div> <br><br><br>
+
+
+
+            <div class="divlast" onclick="submit()" >Submit</div>
+
+
+
+        </form>
+
+
+
+
+        <script src="./bakery.js"></script>
+    </body>
+</html>
